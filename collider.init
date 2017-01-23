@@ -2,8 +2,17 @@
 
 USER=collider
 
+do_terminate() {
+	echo -n "Safely terminating collider..."
+	sleep 1s
+	echo "oops :("
+
+}
 
 case $1 in
+	    terminate)
+		        do_terminate
+	    ;;
         *)
                 echo Uknown Action: $1
         ;;
